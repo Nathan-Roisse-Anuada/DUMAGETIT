@@ -883,12 +883,11 @@ p {
 /*------------section pages----------*/
 
 footer {
-    height: 110px;
-    width: 100%;
+    
 }
 
 footer.expanded {
-    height: 110px;
+    height: 0;
     width: 100%;
 }
 
@@ -1031,6 +1030,19 @@ footer.expanded {
 .description-container-5.expanded button, .description-container-6.expanded button, 
 .description-container-7.expanded button, .description-container-8.expanded button, 
 .description-container-last.expanded button{
+    width: 50%;
+    height: 30px;
+    background-color: #0365fa;
+    border: none;
+    border-radius: 15px;
+    color: white;
+}
+
+.description-container-1 button, .description-container-2 button,
+.description-container-3 button, .description-container-4 button,
+.description-container-5 button, .description-container-6 button, 
+.description-container-7 button , .description-container-8 button,
+.description-container-last button {
     width: 50%;
     height: 30px;
     background-color: #0365fa;

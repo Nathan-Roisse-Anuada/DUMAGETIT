@@ -306,35 +306,42 @@ window.addEventListener('scroll', () => {
 
 function lastContent () {
 
+    function onscroll () {
+        if (contentBase9.classList.contains('expanded') ) { 
+            contentBase9.classList.remove('expanded');
+            content9.classList.remove('expanded');
+            descriptionContainer9.classList.remove('expanded');
+            descriptionContainer9.scrollTop = 0;  
+
+            window.removeEventListener('scroll', onscroll );
+        }
+    }
+
     content9.addEventListener('click', () => {
-        const sectionContainer = document.querySelector('.section-container');
-        const content = document.querySelector('content');
+
         const footer = document.querySelector('.footer');
     
-        contentBase9.classList.add('expanded');
-        content9.classList.add('expanded');
-        descriptionContainer9.classList.add('expanded');
-    
-        if (content9.classList.contains('expanded')) {
-            sectionContainer.classList.add('expanded');
-            content.classList.add('expanded');
+        if (!content9.classList.contains('expanded')) {
             footer.classList.add('expanded');
-
+            contentBase9.classList.add('expanded');
+            content9.classList.add('expanded');
+            descriptionContainer9.classList.add('expanded');
+            window.scrollTo(0, 3888 );
         }
+        
+        console.log(content9, contentBase9, footer, descriptionContainer9);
+
+
+        setTimeout(function() {
+            window.addEventListener('scroll', onscroll);
+        }, 50)
+    
+
     });
 
     
     
-    window.addEventListener('scroll', () => {
-        if (contentBase9.classList.contains('expanded') ) {
-            contentBase9.classList.remove('expanded');
-            content9.classList.remove('expanded');
-            descriptionContainer9.classList.remove('expanded');
-            descriptionContainer9.scrollTop = 0;
-            footer.classList.remove('expanded');
-            
-        }
-    })
+    
 }
 
 
