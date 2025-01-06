@@ -1022,10 +1022,6 @@ p {
 
 /*------------section pages----------*/
 
-footer {
-    
-}
-
 footer.expanded {
     height: 0;
     width: 100%;
@@ -1053,10 +1049,11 @@ footer.expanded {
 
 .home-section-pages {
     display: flex;
+    align-items: center;
     gap: 10px;
     height: 50px;
     margin-bottom: 20px;
-    overflow: scroll;
+    overflow-x: scroll;
 }
 
 .home-section-pages a{
@@ -1077,9 +1074,6 @@ footer.expanded {
 
 .home-section-pages a div {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 15vw;
 }
 
 .food-section, .hotel-section, .tourist-spot-section, .home-section, 
@@ -1095,10 +1089,8 @@ footer.expanded {
    background-color: #9c9c9c;
 }
 
-
-
 .home-section {
-    margin-left: 10px;
+    left: 10px;
 }
 
 .tourist-spot-section p {
@@ -1329,15 +1321,18 @@ footer.expanded {
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
-    width: 100%;
-    gap: 10px;
+    width: auto;
+    gap: 5px;
 }
 
 .booking-check-dates {
     display: flex;
     flex-direction: row;
-    gap: 10px;
-    width: 100%;
+    gap: 5px;
+    width: auto;
+}
+
+#check-in, #check-out {
 }
 
 #hotel-book-form label {
@@ -1499,10 +1494,6 @@ footer.expanded {
 /*--------------------*/
 
 /*-------partner with us-------*/
-
-.navbar-form {
-    
-}
 
 .navbar-form img {
     width: 20px;
