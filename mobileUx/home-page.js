@@ -416,7 +416,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Handle hotel booking form submission
     hotelBookingForm.addEventListener("submit", (event) => {
         event.preventDefault();
-        alert("Thank you for booking your hotel! You will receive a confirmation soon.");
+        alert("Thank you for booking! You will receive a confirmation soon.");
         hotelBookingModal.classList.remove("visible");
         hotelBookingForm.reset();
     });
